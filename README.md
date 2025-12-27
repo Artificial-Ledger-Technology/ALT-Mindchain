@@ -11,8 +11,9 @@ Built with the "Linear" / "Raycast" aesthetic in mind, Mindchain provides a clea
 Modern product development is often fragmented between "where we think" (documentation) and "where we act" (task tracking). Mindchain bridges this gap by connecting documentation to issues in a single, seamless interface.
 
 - **The Mind (Knowledge Base)**: A Notion-like rich text editor for technical specs, roadmaps, and meeting notes.
-- **The Chain (Project Management)**: A high-velocity Kanban board for tracking issues, bugs, and features.
+- **The Chain (Project Management)**: A high-velocity Kanban board with rich issue tracking (Title, Description, Priority).
 - **The Link**: Every issue can be linked to a page, and every page can show relevant issues, ensuring context is never lost.
+- **The Shield**: Enterprise-grade Row Level Security (RLS) ensures your data is private and secure.
 
 ---
 
@@ -36,12 +37,23 @@ Modern product development is often fragmented between "where we think" (documen
 - [x] **Performance**: Optimized for speed with Next.js SSR and client-side transitions.
 - [x] **Database Schema**: Core PostgreSQL tables for Workspaces, Pages, and Issues.
 
-### Phase 2: Collaboration & Real-time (Next)
-- [ ] **TipTap Integration**: Full collaborative, Notion-like rich text editor.
-- [ ] **Real-time Synchronization**: Live updates for issues and documentation via Supabase Realtime.
-- [ ] **Slash Commands**: Insert tables, code blocks, and media with `/`.
-- [ ] **Relational Linking**: Connect documentation pages directly to Kanban cards.
+### Phase 2: Collaboration & Real-time
+- [x] **TipTap Integration**: Full collaborative, Notion-like rich text editor.
+- [x] **Real-time Synchronization**: Live updates for issues and documentation via Supabase Realtime.
+- [x] **Slash Commands & Floating Menus**: Insert formatting and blocks instantly.
+- [x] **Relational Linking**: Connect documentation pages directly to Kanban cards.
 
+### Phase 3: Cosmic Identity & Auth
+- [x] **Cosmic Landing Page**: High-fidelity galaxy-themed entry point.
+- [x] **Supabase Auth Integration**: Secure Sign In and Create Account flows.
+- [x] **ALT Branding**: Recognized as a product of Artificial Ledger Technology.
+- [x] **Session Management**: Intelligent redirection between Landing and Dashboard.
+
+### Phase 6: Core Workflow Enhancements
+- [x] **Rich Issue Tracker**: Replaced prompts with integrated modals for deep task management.
+- [x] **Full CRUD Lifecycle**: Edit and Delete issues directly from the board.
+- [x] **Security Hardening**: Implemented granular RLS policies for complete data isolation.
+- [x] **Integrated Creation Triggers**: Global "New" button and sidebar shortcuts for instant action.
 
 ---
 
@@ -51,11 +63,12 @@ Modern product development is often fragmented between "where we think" (documen
 mindchain/
 ├── src/
 │   ├── app/            # Next.js App Router (Layouts, Pages)
-│   ├── components/     # UI Components (Sidebar, Board, etc.)
-│   ├── hooks/          # Custom React Hooks
-│   ├── lib/            # Utility functions and shared logic
-│   ├── services/       # Supabase / API service layers
-│   └── types/          # TypeScript definitions
+│   ├── components/     # UI Components (Sidebar, Editor, etc.)
+│   ├── context/        # Auth and Global State Context
+│   ├── hooks/          # Custom Hooks (useRealtime)
+│   ├── lib/            # Utilities (Supabase Client)
+│   ├── providers/      # Context/Query Providers
+│   └── services/       # Data Access Layer (Pages, Issues)
 ├── public/             # Static assets
 ├── supabase_schema.sql # Database definition for Supabase
 └── tailwind.config.js  # Styling configuration
@@ -68,29 +81,32 @@ mindchain/
 ### Prerequisites
 
 - Node.js 18.x or later
-- NPM or PNPM
+- Supabase Project (Free tier works great!)
 
-### Installation
+### Installation & Setup
 
-1. **Clone the repository**:
+1. **Clone & Install**:
    ```bash
    git clone https://github.com/flexycode/CCMETHOD_ALT-Mindchain.git
    cd CCMETHOD_ALT-Mindchain
-   ```
-
-2. **Install dependencies**:
-   ```bash
    npm install
    ```
 
-3. **Set up Supabase**:
-   Run the provided `supabase_schema.sql` in your Supabase SQL Editor to initialize the tables (`workspaces`, `pages`, `issues`).
+2. **Environment Variables**:
+   Create a `.env.local` file in the root and add your Supabase credentials:
+   ```env
+   NEXT_PUBLIC_SUPABASE_URL=https://your-project-id.supabase.co
+   NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key-here
+   ```
 
-4. **Run the development server**:
+3. **Database Setup**:
+   Copy the content of `supabase_schema.sql` and run it in your **Supabase SQL Editor**. This sets up the tables, RLS policies, and Realtime publications.
+
+4. **Launch**:
    ```bash
    npm run dev
    ```
-   Open [http://localhost:3000](http://localhost:3000) to view the dashboard.
+   Open [http://localhost:3000](http://localhost:3000) to start using Mindchain.
 
 ---
 
@@ -106,6 +122,8 @@ Full schema details can be found in `supabase_schema.sql`.
 
 ---
 
-## 📄 License
+## 📜 License
 
-This project is open-source and available under the MIT License.
+Copyright (c) 2026 Jay Arre P. Talosig | Artificial Ledger Technology
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
