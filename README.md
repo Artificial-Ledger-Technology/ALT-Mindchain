@@ -59,7 +59,7 @@ Modern product development is often fragmented between "where we think" (documen
 
 ## 📂 Project Structure
 
-```text
+```text 🧊 Mindchain
 mindchain/
 ├── src/
 │   ├── app/            # Next.js App Router (Layouts, Pages)
@@ -69,6 +69,7 @@ mindchain/
 │   ├── lib/            # Utilities (Supabase Client)
 │   ├── providers/      # Context/Query Providers
 │   └── services/       # Data Access Layer (Pages, Issues)
+│
 ├── public/             # Static assets
 ├── supabase_schema.sql # Database definition for Supabase
 └── tailwind.config.js  # Styling configuration
