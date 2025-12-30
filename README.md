@@ -4,6 +4,7 @@
 
 Built with the "Linear" / "Raycast" aesthetic in mind, Mindchain provides a clean, minimalist, and distraction-free environment for engineering teams to sync their thoughts and tasks.
 
+
 ---
 
 ## 🚀 The Vision
