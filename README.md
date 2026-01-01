@@ -55,7 +55,7 @@ Modern product development is often fragmented between "where we think" (documen
 - [x] **Full CRUD Lifecycle**: Edit and Delete issues directly from the board.
 - [x] **Security Hardening**: Implemented granular RLS policies for complete data isolation.
 - [x] **Integrated Creation Triggers**: Global "New" button and sidebar shortcuts for instant action.
-
+- [x] **Implementation**: Need to update the overall architecture workflow
 ---
 
 ## 📂 Project Structure
