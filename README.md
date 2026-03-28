@@ -126,6 +126,6 @@ Full schema details can be found in `supabase_schema.sql`.
 
 ## 📜 License
 
-Copyright (c) 2026 Jay Arre P. Talosig | Artificial Ledger Technology
+Copyright (c) 2026 Artificial Ledger Technology
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
