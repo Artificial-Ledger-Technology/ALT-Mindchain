@@ -129,3 +129,5 @@ Full schema details can be found in `supabase_schema.sql`.
 Copyright (c) 2026 Artificial Ledger Technology
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
