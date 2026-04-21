@@ -124,6 +124,10 @@ Full schema details can be found in `supabase_schema.sql`.
 
 ---
 
+## Changelogs
+
+---
+
 ## 📜 License
 
 Copyright (c) 2026 Artificial Ledger Technology
